@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>tilted.ai - Blog Post - Tilting the balance of power through open source</title>
+    <meta property="og:site_name" content="tilted.ai" />
+    <meta property="og:title" content="tilted.ai - Blog Post - Tilting the balance of power through open source" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://tilted.ai/" />
+    <meta property="og:type" content="article" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="tilted.ai" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preload" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="box">
+
+        <div class="row top-bar">
+            <div class="email">
+                info@tilted.ai
+            </div>
+        </div>
+
+        <div class="row" id="header">
+            <div class="header-title">
+                <h1 class="title">tilted.ai</h1>
+            </div>
+            <div class="header-menu">
+                <span><a href="index.html">Home</a></span>
+                <span><a href="about.html">About</a></span>
+                <span><a class="selected" href="blog.html">Blog</a></span>
+                <span><a href="research.html">Research</a></span>
+                <span><a href="http://github.com/tilted-ai" target='_top'><img src="img/GitHub-Mark-120px-plus.png"></a></span>
+            </div>
+        </div>
+
+        <div class="row article" id="content">
+            <div class="post-date">Sept. 4, 2021</div>
+            <h2>Tilting the balance of power through open source</h2>
+            <img src="img/tilt.jpg"><br>
+            <div class="content">
+                <div><p>In a welcome move in the field of machine learning, various communities have formed
+                    with the aim of making deep learning technology available to all researchers, regardless
+                    of the resources they have available, and moreover, to the general public.</p>
+                </div>
+                <div><p>To give just two examples, the BigScience project by Hugging Face [1] and EleutherAI
+                    [2] have focussed on the training of very large language models, such as GPT3 [3], using
+                    existing neural network architectures. These have been a leading step forward for the field,
+                    but challenges remain both for research and for the application of SOTA techniques.</p>
+                </div>
+                <div><p>In research, the last major deep learning architectural change now in common use was
+                    the Transformer[4] from 2017 - a long time by the standards of the field. In many
+                    cases, a significant bottleneck to the development of new architectural ideas by researchers
+                    are the resources available to train and test these ideas. Tilted.ai is inteded to be a
+                    place where those researchers can come to do this research at a moderate scale.</p>
+                </div>
+                <div><p>Additionally, there are three problems in regards to having an abundance of useful live
+                    implementations of SOTA methods. The first is that models need to be customizable to
+                    the specific needs (use case) of the user. The second is that the size of these released
+                    models still require significant resources to run. The third is that the launch and integration
+                    of these systems still requires significant expertise.</p>
+                </div>
+                <div><p>Thus, contrary to the collectives listed above, our focus is on enabling fast deployment of
+                    new ideas related to effective task agnostic architectures at moderate scale. With this focus, we
+                    aim to both push the state-of-the-art (with respect to learning architectures through collective
+                    modelling and testing of novel ideas that might otherwise be left undeveloped), as well as make
+                    these technologies available to both ML researchers and devlopers unfamiliar with machine
+                    learning in a simple manner.</p>
+                </div>
+                <div><p>The expected process for the release of these architectures begins with collabrative research and
+                    development. During the R&D cycle, extensive testing will be performed to ensure the generality
+                    of the underlying architecture. Once results demonstrate effective generality, we will release
+                    the code and test results onto <a href="https://github.com/tilted-ai">GitHub</a>. Shortly
+                    thereafter, we will publish our architecutre and experimental results on Arxiv.</p>
+                </div>
+                <div><p>We also plan on releasing a command line tool for developers unfamiliar with machine learning
+                    to be able to quickly train and apply our models to their existing datasets. While the exact
+                    architecture has not been decided, the primary goal is simplicity and ease of use - thus promoting
+                    the utilization of these architectures in the wild.</p>
+                </div>
+            </div>
+            <ol class="references">
+                <li><a href="https://bigscience.huggingface.co">https://bigscience.huggingface.co</a></li>
+                <li><a href="https://www.eleuther.ai">https://www.eleuther.ai</a></li>
+                <li><a href="https://arxiv.org/abs/2005.14165">T. B. Brown, B. Mann, N. Ryder, M. Subbiah, J. Kaplan, P. Dhariwal, A. Neelakantan,
+                    P. Shyam, G. Sastry, A. Askell, S. Agarwal, A. Herbert-Voss, G. Krueger, T. Henighan, R.
+                    Child, A. Ramesh, D. M. Ziegler, J. Wu, C. Winter, C. Hesse, M. Chen, E. Sigler, M.
+                    Litwin, S. Gray, B. Chess, J. Clark, C. Berner, S. McCandlish, A. Radford, I. Sutskever,
+                    and D. Amodei, Language Models are Few-Shot Learners. arXiv preprint
+                    arXiv:2005.14165 (2020).</a></li>
+                <li><a href="https://arxiv.org/abs/1706.03762">A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N Gomez, L. Kaiser,
+                    and I. Polosukhin, Attention Is All You Need. arXiv preprint arXiv:1706.03762 (2017).</a></li>
+            </ol>
+        </div>
+
+        <div class="row footer">© 2021 <a href="http://tilted.ai/">tilted.ai</a></div>
+
+    </div>
+
+</body>
+
+</html>

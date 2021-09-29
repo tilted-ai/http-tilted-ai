@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>tilted.ai - Blog Post - Algebraic Performers for Higher-Level Cognition</title>
+    <meta property="og:site_name" content="tilted.ai" />
+    <meta property="og:title" content="tilted.ai - Blog Post - Algebraic Performers for Higher-Level Cognition" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="http://tilted.ai/" />
+    <meta property="og:type" content="article" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="tilted.ai" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preload" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="box">
+
+        <div class="row top-bar">
+            <div class="email">
+                info@tilted.ai
+            </div>
+        </div>
+
+        <div class="row" id="header">
+            <div class="header-title">
+                <h1 class="title">tilted.ai</h1>
+            </div>
+            <div class="header-menu">
+                <span><a href="index.html">Home</a></span>
+                <span><a href="about.html">About</a></span>
+                <span><a class="selected" href="blog.html">Blog</a></span>
+                <span><a href="research.html">Research</a></span>
+                <span><a href="http://github.com/tilted-ai" target='_top'><img src="img/GitHub-Mark-120px-plus.png"></a></span>
+            </div>
+        </div>
+
+        <div class="row article" id="content">
+            <div class="post-date">Sept. 23, 2021</div>
+            <h2>Algebraic Performers for Higher-Level Cognition</h2>
+            <img src="img/cognitive-algebraic.jpg"></a>
+            <div class="content">
+                <div><p>Understanding how humans can simultaneously reason about multiple concepts in a rich
+                        and constructive manner remains an open problem in machine learning. One way to tackle
+                        the problem is to introduce various inductive biases into the learning architecture to
+                        assist in developing these complex representations and relations [8]. Among these, a
+                        popular relational bias is the Transformer which learns to update entities by including
+                        pairwise relations, ie. binary or 2-ary, between entities [14]. The module inside the
+                        Transformer responsible for this is called <em>attention</em>.</p>
+                </div>
+                <div><p>There is growing evidence from the field of neuroscience that the organization of the
+                        repre- sentations used for abstract reasoning in humans is rooted in the same neural
+                        mechanisms that enable spatial navigation [5, 6, 1, 2, 15, 13]. The mechanisms
+                        underlying spatial navigation in human and animal brains are better understood than many
+                        other modalities which motivates the question of whether such tools can be successfully
+                        introduced as inductive biases in machine learning.</p>
+                </div>
+                <div><p>One such tool is to allow higher-order relations, for example in the form of three way,
+                        ie. ternary or 3-ary, relations. A naive implementation of three way relations in the
+                        Transformer would result in cubic computational complexity in the number of entities.
+                        This computational bottleneck has been addressed in the literature in a number of ways.
+                        We highlight two of them here.</p>
+                </div>
+                <div><p>The first involves a 2-simplicial update with memory nodes [4] and the second uses the
+                        triangle multiplicative update from the EvoFormer contained in the AlphaFold
+                        architecture [12].<span class="ql-size-small">﻿</span></p>
+                </div>
+                <div><p> 1. (2-Simplical Update) There is a natural triple scalar product in arbitrary
+                        dimensions whose origin lies in the Clifford algebra. Using this triple product, one can
+                        update entities by including both pairwise interactions - which update value vectors
+                        through the standard transformer - in addition to ternary interactions - which update
+                        tensor products of value vectors. To decrease computational complexity, the base of the
+                        2-simplex (or triangle) formed by the three entities is taken from a set of pairs
+                        predicted by the ordinary attention. These pairs are similar to the master nodes in [7]
+                        and the memory slots in the Neural Turing Machine [9].</p>
+                </div>
+                <div><p> 2. (Triangle Update) This involves a novel combination of pairwise updates to build a
+                        triple scalar product which acts on each pair of entities. This allows edges to get
+                        updated by information from the full triangle. These updated pair interactions are then
+                        used to update each entity. Since every update in the algorithm is binary, computational
+                        complexity is controlled.</p>
+                </div>
+                <div><p>Both of these solutions can be interpreted from the point of view of enriching the
+                        space of representations to include deeper algebraic structure. Indeed, some early
+                        approaches to artificial reasoning postulate the addition of algebraic manipulations in
+                        latent space as a prerequisite for machine intelligence [3].</p>
+                </div>
+                <div><p>A recent advance in machine learning is the use of input agnostic Transformers with
+                        reduced computational complexity [10, 11]. However, these have only been applied in a
+                        limited way to reinforcement learning applications thus far. The aim of this project is
+                        to develop and train reinforcement learning agents to solve complex reasoning tasks
+                        using higher-level cognition in the form of Perceivers containing various higher-order
+                        relations. These relations come from extensions and combinations of 2-simplicial and
+                        Triangle updates.</p>
+                </div>
+            </div>
+            <ol class="references">
+                <li><a href="https://pubmed.ncbi.nlm.nih.gov/30359611/">T. E. J. Behrens, T. H. Muller, J. C. R. Whittington, S. Mark, A. B. Baram, K. L.
+                        Stachenfeld and Z. Kurth-Nelson, What is a cognitive map? Organizing knowledge for
+                        flexible behavior, Neuron 100, pp. 490–509, 2018.</a></li>
+                <li><a href="https://pubmed.ncbi.nlm.nih.gov/30409861/">J. L. S. Bellmund, P. Gardenfors, E. I. Moser and C. F. Doeller, Navigating
+                        cognition: Spatial codes for human thinking, Science 362, 2018.</a></li>
+                <li><a href="https://arxiv.org/abs/1102.1808">L. Bottou, From machine learning to machine reasoning, Mach Learn (2014)
+                        94:133–149.</a></li>
+                <li><a href="https://arxiv.org/abs/1909.00668">J. Clift, D. Doryn, D. Murfet, J. Wallbridge, Logic and the 2-simplicial
+                        transformer, International Conference on Learning Representations (ICLR), 2020.</a></li>
+                <li><a href="https://pubmed.ncbi.nlm.nih.gov/27313047/">A. O. Constantinescu, J. X. O’Reilly and T. E. J. Behrens, Organising conceptual
+                        knowledge in humans with a gridlike code, Science 352, Issue 6292, pp. 1464–1468, 2016.
+                    </a></li>
+                <li><a href="https://www.nature.com/articles/nn.4656">R. A. Epstein, E. Z. Patai, J. B. Julian and H. J. Spiers, The cognitive map in
+                        humans: spatial navigation and beyond, Nature Neuroscience, 2017.</a></li>
+                <li><a href="https://arxiv.org/abs/1704.01212">J. Gilmer, S. S. Schoenholz, P. F. Riley, O. Vinyals and G. E. Dahl, Neural message
+                        passing for quantum chemistry, in Proceedings of the International Conference on Machine
+                        Learning (ICML), 2017.</a></li>
+                <li><a href="https://arxiv.org/abs/2011.15091">A. Goyal, Y. Bengio, Inductive Biases for Deep Learning of Higher-Level Cognition,
+                        preprint arXiv:2011.15091, 2020.</a></li>
+                <li><a href="https://arxiv.org/abs/1410.5401">A. Graves, G. Wayne and I. Danihelka, Neural Turing machines, preprint
+                        arXiv:1410.5401, 2014.</a></li>
+                <li><a href="https://arxiv.org/abs/2103.03206"> A. Jaegle, F. Gimeno, A. Brock et. al., Perceiver: General Perception with
+                        Iterative Attention, preprint arXiv:2103.03206, 2021.</a></li>
+                <li><a href="https://arxiv.org/abs/2107.14795"> A. Jaegle, S. Borgeaud, J-B. Alayrac et. al., Perceiver IO: A General Architecture
+                        for Structured Inputs & Outputs, preprint arXiv:2107.14795, 2021.</a></li>
+                <li><a href="https://www.nature.com/articles/s41586-021-03819-2"> J. Jumper, R. Evans, A. Pritzel et. al., Highly accurate protein structure
+                        prediction with AlphaFold, Nature, 2021.</a></li>
+                <li><a href="https://pubmed.ncbi.nlm.nih.gov/31280961/"> Y. Liu, R. J. Dolan, Z. Kurth-Nelson and T. E. J. Behrens, Human replay
+                        spontaneously reorganizes experience, Cell, 178 pp. 1–13, 2019.</a></li>
+                <li><a href="https://arxiv.org/abs/1706.03762"> A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A.N. Gomez, L.
+                        Kaiserand and I. Polosukhin, Attention is all you need, in Advances in Neural
+                        Information Processing Systems (NeurIPS), 2017.</a></li>
+                <li><a href="https://arxiv.org/abs/1805.09042"> J. C. R. Whittington, T. H. Muller, S. Mark, C. Barry and T. E. J. Behrens,
+                        Generalisation of structural knowledge in the hippocampal-entorhinal system, in Advances
+                        in Neural Information Processing Systems (NeurIPS), 2018.</a></li>
+            </ol>
+        </div>
+
+        <div class="row footer">© 2021 <a href="http://tilted.ai/">tilted.ai</a></div>
+
+    </div>
+
+</body>
+
+</html>
