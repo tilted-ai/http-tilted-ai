@@ -1,2 +1,2 @@
 # http-tilted-ai
-tilted.ai website
+A repo containing the code for the tilted.ai website
